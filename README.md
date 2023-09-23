@@ -121,8 +121,9 @@ For those who need the open a relay server directly to external/WAN traffic and 
 #### C. (Optional) Automatic Server Restart on MacOS. 🍎
 Want the server to start every time you log into your Mac? Here's how:
 a. Open "System Preferences" ➡️ "Login Items."
-b. Click '+' ➡️ add `start.sh`.
+b. Click '+' ➡️ add `start-unattended.sh`.
 
+*Note: start-undattended.sh is for when entry of command line arguments is not available or desired (such as when launched on login). Instead, it creates a server on port 3456 that relays to port 6789 on the same machine that is WAN-enabled. That means, so long as you are forwarding port 3456, it’s available to anyone anywhere. Use with caution! It also doesn’t depend on your terminal session remaining open. Lastly, it’ll inject “\n\n### User:\n" before and "\n\n### Assistant:\n" after each user message.*
 
 &nbsp;
 
